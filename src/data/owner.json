@@ -1,0 +1,17 @@
+{
+  "companyName": "Zeus Viaggi",
+  "ownerName": "Gaspare Fonte",
+  "phone": "0123456789",
+  "email": "zeusviaggi@mail.com",
+  "address": {
+    "city": "Fulgatore",
+    "province": "TP",
+    "region": "Sicilia",
+    "country": "Italia",
+    "street": "Via Cap. Antonino Rizzo",
+    "streetNumber": "234"
+  },
+  "vatNumber": "01234567890",
+  "codFisc": "AJHDHFKJFHKAHKHKFAHFKAH",
+  "foundationYear": "2004"
+}

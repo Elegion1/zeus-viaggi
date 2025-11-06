@@ -1,0 +1,20 @@
+[
+  {
+    "id": "chi-siamo",
+    "title": "Chi siamo",
+    "text": "Fondata nel 2004 a Fulgatore (Trapani), nel cuore della Sicilia occidentale, Zeus Viaggi nasce dalla passione per i viaggi e l’ospitalità. Da una posizione strategica che collega facilmente Palermo, Catania, Marsala, San Vito Lo Capo ed Erice, operiamo in tutta la Sicilia, in Italia e anche all’estero. Siamo un team di autisti professionisti e multilingue, accomunati dallo stesso obiettivo: offrire un servizio impeccabile, trasformando ogni viaggio in un’esperienza piacevole e rilassante.",
+    "image": "/interni.JPG"
+  },
+  {
+    "id": "servizi",
+    "title": "I nostri servizi",
+    "text": "Offriamo un’ampia gamma di servizi di trasporto con conducente in Sicilia e in tutta Italia: Transfer da e per aeroporti, porti e stazioni (Trapani, Palermo, Catania), Tour turistici personalizzati alla scoperta delle meraviglie della Sicilia, Servizi per eventi e cerimonie, inclusi matrimoni e congressi, Trasporti aziendali per meeting, eventi e ospiti d’affari, Noleggio autobus, minivan e auto con conducente per gruppi di ogni dimensione. Ogni servizio è curato nei minimi dettagli per offrire puntualità, comfort e discrezione, da sempre i valori distintivi di Zeus Viaggi.",
+    "image": "/IMG_2803.jpeg"
+  },
+  {
+    "id": "flotta",
+    "title": "Flotta",
+    "text": "Mettiamo a disposizione dei nostri clienti una flotta moderna, versatile e costantemente rinnovata, adatta a ogni esigenza di trasporto: Auto di rappresentanza per servizi NCC e transfer privati, Minivan e minibus per piccoli gruppi o famiglie, Autobus da 19, 35 e 55 posti, ideali per viaggi turistici, gite scolastiche, eventi aziendali e cerimonie. Ogni mezzo è sanificato, climatizzato e dotato dei più moderni comfort per garantire sicurezza, comfort e relax in ogni spostamento.",
+    "image": "/IMG_2797.jpeg"
+  }
+]
