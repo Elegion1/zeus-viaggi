@@ -76,7 +76,7 @@
 
 @media (max-width: 768px) {
   .section {
-    flex-direction: column;
+    flex-direction: column !important;
     text-align: center;
   }
 
