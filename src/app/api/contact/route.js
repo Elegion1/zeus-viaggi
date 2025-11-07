@@ -5,25 +5,26 @@ export async function POST(req) {
     const { name, email, phone, message } = await req.json();
 
     // ✅ crea il transporter (usa un account reale)
-    // const transporter = nodemailer.createTransport({
-    //   host: "smtp.gmail.com", // oppure quello del tuo provider
-    //   port: 587,
-    //   secure: false,
-    //   auth: {
-    //     user: process.env.SMTP_USER, // la tua email
-    //     pass: process.env.SMTP_PASS, // la tua password o app password
-    //   },
-    // });
-
-    // Configura il trasporto SMTP di Mailtrap
     const transporter = nodemailer.createTransport({
-      host: "sandbox.smtp.mailtrap.io",
-      port: 2525,
+      service: "gmail",
       auth: {
-        user: "3a250ff027b841",
-        pass: "10607b30f1dda7",
+        type: "OAuth2",
+        user: "me@gmail.com",
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        refreshToken: process.env.GOOGLE_REFRESH_TOKEN,
       },
     });
+
+    // Configura il trasporto SMTP di Mailtrap
+    // const transporter = nodemailer.createTransport({
+    //   host: "sandbox.smtp.mailtrap.io",
+    //   port: 2525,
+    //   auth: {
+    //     user: "3a250ff027b841",
+    //     pass: "10607b30f1dda7",
+    //   },
+    // });
 
     // ✅ definisci il contenuto della mail
     await transporter.sendMail({

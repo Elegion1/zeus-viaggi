@@ -89,10 +89,11 @@ export default function ContactForm() {
         ></textarea>
         <div className="invalid-feedback">Inserisci un messaggio</div>
       </div>
-
-      <button type="submit" className="btn btn-primary">
-        {status === "loading" ? "Invio in corso..." : "Invia richiesta"}
-      </button>
+      <div className="d-flex justify-content-center align-items-center">
+        <button type="submit" className="btn btn-primary rounded-0">
+          {status === "loading" ? "Invio in corso..." : "Invia richiesta"}
+        </button>
+      </div>
 
       {status === "success" && (
         <p className="text-success mt-2">✅ Messaggio inviato correttamente!</p>

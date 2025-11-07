@@ -36,18 +36,25 @@ export default function Home() {
         </div>
       </main>
 
-      <div className="d-flex justify-content-center align-items-center my-5">
+      <div className="d-flex justify-content-center align-items-center flex-wrap my-5 gap-2">
         {sectionsData.map((section, index) => (
           <a
             key={index}
             href={`#${section.id}`}
-            className={`btn btn-secondary rounded-0 ${
-              index !== sectionsData.length - 1 ? "me-2" : ""
-            }`}
+            className="btn btn-secondary rounded-0"
           >
             {section.title}
           </a>
         ))}
+        <a className="btn btn-secondary rounded-0" href="#contatti">
+          Contatti
+        </a>
+        <a
+          className="btn btn-secondary rounded-0"
+          href="#richiedi-informazioni"
+        >
+          Richiedi Informazioni
+        </a>
       </div>
 
       {sectionsData.map((section, index) => (
@@ -64,10 +71,10 @@ export default function Home() {
       {/* Contatti */}
       <section id="contatti" className="contact-section py-5 bg-light">
         <div className="container">
-          <h2 className="mb-4 text-center">Contatti</h2>
           <div className="row gx-4">
             {/* Info dirette */}
             <div className="col-lg-5 mb-4">
+              <h3 className="mb-4 text-center">Contatti</h3>
               <div className="contact-info">
                 <p>
                   <strong>📍 Sede:</strong> {companyData.address.street},{" "}
@@ -105,8 +112,9 @@ export default function Home() {
             </div>
 
             {/* Modulo di contatto */}
-            <div className="col-lg-7">
-              <span className="text-muted">Campi obbligatori *</span>
+            <div id="richiedi-informazioni" className="col-lg-7">
+              <h3 className="text-center">Richiedi informazioni</h3>
+              <p className="text-muted">Campi obbligatori *</p>
               <ContactForm />
             </div>
           </div>
@@ -157,7 +165,7 @@ export default function Home() {
             </div>
 
             {/* Contatti */}
-            <div className="col-lg-4 text-center text-lg-end">
+            <div id="contatti" className="col-lg-4 text-center text-lg-end">
               <h6 className="fw-bold mb-3">Contatti</h6>
               <p className="mb-1">
                 📞{" "}
