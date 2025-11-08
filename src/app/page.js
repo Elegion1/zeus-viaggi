@@ -16,9 +16,23 @@ export const metadata = {
   ],
 };
 
+export const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  name: "Zeus Viaggi",
+  url: "https://zeus-viaggi.vercel.app",
+  logo: "https://zeus-viaggi.vercel.app/logo.png",
+  description:
+    "Azienda specializzata in noleggio autobus e minivan con conducente",
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* Hero */}
