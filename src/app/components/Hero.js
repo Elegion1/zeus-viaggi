@@ -1,16 +1,6 @@
-import Head from "next/head";
-
 export default function Hero() {
   return (
     <>
-      <Head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/image.JPG"
-          fetchpriority="high"
-        />
-      </Head>
       <main
         fetchPriority="high"
         className="hero-background text-light position-relative"

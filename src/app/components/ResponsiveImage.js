@@ -1,26 +1,15 @@
-export default function ResponsiveImage({
-  srcBase,
-  sizes = [200, 400, 800, 1600],
-  ext = "webp",
-  alt = "",
-  className = "",
-}) {
-  // Se srcBase è un oggetto import Next.js, usa src
-  const base = "images/resized";
-  const filename = srcBase;
+import Image from "next/image";
 
-  const srcSet = sizes
-    .map((size) => `${base}/${size}/${filename}.${ext} ${size}w`)
-    .join(", ");
-
+export default function ResponsiveImage({ filename, alt = "", className = "" }) {
   return (
-    <img
-      src={`${base}/${sizes[0]}/${filename}.${ext}`} // fallback: dimensione più piccola
-      srcSet={srcSet}
-      sizes="((max-width: 200px) 200px, max-width: 400px) 400px, (max-width: 800px) 800px, 1600px"
+    <Image
+      src={`/images/${filename}`}
       alt={alt}
       className={className}
-      loading="lazy"
+      width={1600}
+      height={900}
+      sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 1600px"
+      priority={false}
     />
   );
 }

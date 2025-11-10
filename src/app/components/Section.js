@@ -6,8 +6,8 @@ export default function Section({ id, title, text, image, reverse }) {
       id={id}
       className={`section container ${reverse ? "flex-row-reverse" : ""}`}
     >
-      <div className="section-img">
-        <ResponsiveImage srcBase={image} alt={title} />
+      <div className="section img">
+        <ResponsiveImage filename={image} alt={title} />
       </div>
       <div className="section-text">
         <h2>{title}</h2>
