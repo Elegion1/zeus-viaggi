@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Section from "./components/Section";
+import Hero from "./components/Hero";
 import ContactForm from "./components/ContactForm";
 import sectionsData from "../data/sections.json";
 import companyData from "../data/owner.json";
@@ -19,11 +20,16 @@ export const metadata = {
 export const jsonLd = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
-  name: "Zeus Viaggi",
-  url: "https://zeus-viaggi.vercel.app",
-  logo: "https://zeus-viaggi.vercel.app/logo.png",
-  description:
-    "Azienda specializzata in noleggio autobus e minivan con conducente",
+  name: companyData.companyName,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      companyData.address.street + " " + companyData.address.streetNumber,
+    addressLocality: companyData.address.city,
+    addressRegion: companyData.address.region,
+    postalCode: companyData.address.zip,
+    addressCountry: companyData.address.country,
+  },
 };
 
 export default function Home() {
@@ -36,19 +42,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <main className="hero-background text-light position-relative">
-        <div className="hero-overlay position-absolute"></div>
-        <div className="container position-relative z-1">
-          <div className="hero-text position-absolute">
-            <h1 className="responsive-text fw-bold mb-3">
-              Noleggio autobus con conducente a Trapani e in tutta la Sicilia
-            </h1>
-            <p className="lead responsive-text-p">
-              Professionalità, eleganza e affidabilità dal 2004
-            </p>
-          </div>
-        </div>
-      </main>
+      <Hero />
 
       <div className="d-flex justify-content-center align-items-center flex-wrap my-5 gap-2">
         {sectionsData.map((section, index) => (
