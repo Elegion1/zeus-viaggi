@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="navbar fade-bg fixed-top z-3">
       <div className="container d-flex justify-content-center align-items-center">
-        <img src="/logo.png" alt="logo-zeus-viaggi" className="logo-img" />
+        <img src="/images/logo.png" alt="logo-zeus-viaggi" className="logo-img" />
       </div>
     </nav>
   );

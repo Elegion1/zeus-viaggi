@@ -7,7 +7,7 @@ export default function Hero() {
         <link
           rel="preload"
           as="image"
-          href="/image.JPG"
+          href="/images/image.JPG"
           fetchpriority="high"
         />
       </Head>

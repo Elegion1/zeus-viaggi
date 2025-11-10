@@ -134,7 +134,7 @@ export default function Home() {
             {/* Logo e descrizione */}
             <div className="col-lg-4 text-center text-lg-start">
               <img
-                src="/logo.png"
+                src="/images/logo.png"
                 alt="Logo Zeus Viaggi"
                 className="footer-logo mb-3"
               />

@@ -1,3 +1,5 @@
+import ResponsiveImage from "./ResponsiveImage";
+
 export default function Section({ id, title, text, image, reverse }) {
   return (
     <section
@@ -5,7 +7,7 @@ export default function Section({ id, title, text, image, reverse }) {
       className={`section container ${reverse ? "flex-row-reverse" : ""}`}
     >
       <div className="section-img">
-        <img loading="lazy" src={image} alt={title} />
+        <ResponsiveImage srcBase={image} alt={title} />
       </div>
       <div className="section-text">
         <h2>{title}</h2>
