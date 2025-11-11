@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <>
@@ -5,6 +7,18 @@ export default function Hero() {
         fetchPriority="high"
         className="hero-background text-light position-relative"
       >
+        <Image
+          src="/images/image.JPG"
+          alt="Autobus Zeus Viaggi"
+          fill
+          priority
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+            zIndex: 0,
+          }}
+        />
         <div className="hero-overlay position-absolute"></div>
         <div className="container position-relative z-1">
           <div className="hero-text position-absolute">
