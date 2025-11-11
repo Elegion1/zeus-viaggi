@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import ContactForm from "./components/ContactForm";
 import sectionsData from "../data/sections.json";
 import companyData from "../data/owner.json";
+import CookieConsentBanner from "./components/CookieConsentBanner";
 
 export const metadata = {
   title: `Noleggio Autobus con Conducente a Trapani | ${companyData.companyName}`,
@@ -35,6 +36,7 @@ export const jsonLd = {
 export default function Home() {
   return (
     <>
+      <CookieConsentBanner />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -100,8 +102,7 @@ export default function Home() {
                   </a>
                 </p>
                 <p>
-                  <strong>P.IVA / C.F.:</strong> {companyData.vatNumber} /{" "}
-                  {companyData.codFisc}
+                  <strong>P.IVA:</strong> {companyData.vatNumber}
                 </p>
               </div>
               {/* Se vuoi mettere una piccola mappa statica o embed */}
@@ -183,7 +184,7 @@ export default function Home() {
               </p>
               <p className="mb-1">
                 ✉️{" "}
-                <a href="mailto:info@zeusviaggi.it" className="footer-link">
+                <a href={`mailto:${companyData.email}`} className="footer-link">
                   {companyData.email}
                 </a>
               </p>
