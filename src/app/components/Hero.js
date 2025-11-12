@@ -3,15 +3,12 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
-      <main
-        fetchPriority="high"
-        className="hero-background text-light position-relative"
-      >
+      <main className="hero-background text-light position-relative">
         <Image
           src="/images/image.JPG"
           alt="Autobus Zeus Viaggi"
           fill
-          priority
+          fetchPriority="high"
           sizes="100vw"
           style={{
             objectFit: "cover",
