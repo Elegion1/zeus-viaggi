@@ -9,6 +9,7 @@ export default function Hero() {
           alt="Autobus Zeus Viaggi"
           fill
           fetchPriority="high"
+          loading="eager"
           sizes="100vw"
           style={{
             objectFit: "cover",

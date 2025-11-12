@@ -5,6 +5,7 @@ import ContactForm from "./components/ContactForm";
 import sectionsData from "../data/sections.json";
 import companyData from "../data/owner.json";
 import CookieConsentBanner from "./components/CookieConsentBanner";
+import Image from "next/image";
 
 export const metadata = {
   title: `Noleggio Autobus con Conducente a Trapani | ${companyData.companyName}`,
