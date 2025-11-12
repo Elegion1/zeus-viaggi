@@ -152,7 +152,7 @@ export default function Home() {
 
             {/* Link rapidi */}
             <div className="col-lg-4 text-center">
-              <h6 className="fw-bold mb-3">Link utili</h6>
+              <h4 className="fw-bold mb-3">Link utili</h4>
               <ul className="list-unstyled mb-0">
                 <li>
                   <a href="#chi-siamo" className="footer-link">
@@ -179,7 +179,7 @@ export default function Home() {
 
             {/* Contatti */}
             <div id="contatti" className="col-lg-4 text-center text-lg-end">
-              <h6 className="fw-bold mb-3">Contatti</h6>
+              <h4 className="fw-bold mb-3">Contatti</h4>
               <p className="mb-1">
                 📞{" "}
                 <a href={`tel:${companyData.phone}`} className="footer-link">
