@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export default function ResponsiveImage({ filename, alt = "", className = "" }) {
+export default function ResponsiveImage({
+  filename,
+  alt = "",
+  className = "",
+}) {
   return (
     <Image
       src={`/images/${filename}`}
