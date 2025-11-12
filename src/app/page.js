@@ -134,10 +134,13 @@ export default function Home() {
           <div className="row gy-4 align-items-center">
             {/* Logo e descrizione */}
             <div className="col-lg-4 text-center text-lg-start">
-              <img
+              <Image
                 src="/images/logo.png"
-                alt="Logo Zeus Viaggi"
+                alt="logo-zeus-viaggi"
                 className="footer-logo mb-3"
+                width={935}
+                height={308}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <p className="small">
                 Zeus Viaggi è specializzata nel noleggio autobus e minivan con
