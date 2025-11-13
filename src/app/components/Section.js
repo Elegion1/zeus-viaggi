@@ -11,7 +11,7 @@ export default function Section({ id, title, text, image, reverse }) {
       </div>
       <div className="section-text">
         <h2>{title}</h2>
-        <p>{text}</p>
+        <p dangerouslySetInnerHTML={{ __html: text }} />
       </div>
     </section>
   );

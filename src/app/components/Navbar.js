@@ -21,14 +21,16 @@ export default function Navbar() {
   return (
     <nav className="navbar fade-bg fixed-top z-3">
       <div className="container d-flex justify-content-center align-items-center">
-        <Image
-          src="/images/logo.png"
-          alt="logo-zeus-viaggi"
-          className="logo-img"
-          width={935}
-          height={308}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        <a href="/">
+          <Image
+            src="/images/logo.png"
+            alt="logo-zeus-viaggi"
+            className="logo-img"
+            width={935}
+            height={308}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </a>
       </div>
     </nav>
   );
