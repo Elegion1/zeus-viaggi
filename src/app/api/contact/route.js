@@ -13,9 +13,10 @@ export async function POST(req) {
     },
   });
 
-  const mailOptions = {
-    from: process.env.SMTP_USER, // deve essere info@zeusviaggi.it
-    to: process.env.SMTP_USER, // destinatario (può essere lo stesso)
+  // Email che ricevi tu
+  const mailToOwner = {
+    from: process.env.SMTP_USER,
+    to: process.env.SMTP_USER,
     replyTo: email,
     subject: `Nuovo messaggio dal sito Zeus Viaggi`,
     text: `
@@ -26,8 +27,32 @@ export async function POST(req) {
     `,
   };
 
+  // Email di riepilogo da inviare al cliente
+  const mailToClient = {
+    from: process.env.SMTP_USER,
+    to: email,
+    subject: `Riepilogo del tuo messaggio inviato a Zeus Viaggi`,
+    text: `
+Ciao ${name},
+
+abbiamo ricevuto il tuo messaggio:
+
+"${message}"
+
+Ti risponderemo il prima possibile.
+Grazie per averci contattati!
+
+Zeus Viaggi
+    `,
+  };
+
   try {
-    await transporter.sendMail(mailOptions);
+    // prima a te
+    await transporter.sendMail(mailToOwner);
+
+    // poi al cliente
+    await transporter.sendMail(mailToClient);
+
     return new Response(JSON.stringify({ success: true }));
   } catch (error) {
     console.error("Errore invio email:", error);
