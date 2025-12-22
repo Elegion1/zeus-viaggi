@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import ContactForm from "./components/ContactForm";
 import sectionsData from "../data/sections.json";
 import companyData from "../data/owner.json";
+import Link from "next/link";
 
 
 export const metadata = {
@@ -45,23 +46,23 @@ export default function Home() {
 
       <div className="d-flex justify-content-center align-items-center flex-wrap my-5 gap-2">
         {sectionsData.map((section, index) => (
-          <a
+          <Link
             key={index}
             href={`#${section.id}`}
             className="btn btn-secondary rounded-0"
           >
             {section.title}
-          </a>
+          </Link>
         ))}
-        <a className="btn btn-secondary rounded-0" href="/contatti">
+        <Link className="btn btn-secondary rounded-0" href="/contatti">
           Contatti
-        </a>
-        <a
+        </Link>
+        <Link
           className="btn btn-secondary rounded-0"
           href="#richiedi-informazioni"
         >
           Richiedi Informazioni
-        </a>
+        </Link>
       </div>
 
       {sectionsData.map((section, index) => (
@@ -90,13 +91,13 @@ export default function Home() {
                 </p>
                 <p>
                   <strong>📞 Telefono:</strong>{" "}
-                  <a href={`tel:${companyData.phone}`}>{companyData.phone}</a>
+                  <Link href={`tel:${companyData.phone}`}>{companyData.phone}</Link>
                 </p>
                 <p>
                   <strong>✉️ Email:</strong>{" "}
-                  <a href={`mailto:${companyData.email}`}>
+                  <Link href={`mailto:${companyData.email}`}>
                     {companyData.email}
-                  </a>
+                  </Link>
                 </p>
                 <p>
                   <strong>P.IVA:</strong> {companyData.vatNumber}

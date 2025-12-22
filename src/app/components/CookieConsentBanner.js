@@ -68,9 +68,9 @@ export default function CookieConsentBanner({
       <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <div className="mb-2 mb-md-0">
           {message}{" "}
-          <a href="/privacy" target="_blank" rel="noopener noreferrer">
+          <Link href="/privacy" target="_blank" rel="noopener noreferrer">
             Privacy Policy
-          </a>
+          </Link>
         </div>
         <div className="d-flex gap-2">
           <button className="btn btn-secondary" onClick={handleDecline}>

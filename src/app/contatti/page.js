@@ -1,6 +1,7 @@
 import ContactForm from "../components/ContactForm";
 import companyData from "../../data/owner.json";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Contatti() {
   return (
@@ -59,13 +60,13 @@ export default function Contatti() {
                 </p>
                 <p>
                   <strong>📞 Telefono:</strong>{" "}
-                  <a href={`tel:${companyData.phone}`}>{companyData.phone}</a>
+                  <Link href={`tel:${companyData.phone}`}>{companyData.phone}</Link>
                 </p>
                 <p>
                   <strong>✉️ Email:</strong>{" "}
-                  <a href={`mailto:${companyData.email}`}>
+                  <Link href={`mailto:${companyData.email}`}>
                     {companyData.email}
-                  </a>
+                  </Link>
                 </p>
                 <p>
                   <strong>P.IVA:</strong> {companyData.vatNumber}

@@ -1,4 +1,5 @@
 import ResponsiveImage from "./ResponsiveImage";
+import Link from "next/link";
 
 export default function Section({ id, title, text, image, reverse }) {
   return (
@@ -10,7 +11,7 @@ export default function Section({ id, title, text, image, reverse }) {
         <ResponsiveImage filename={image} alt={title} />
       </div>
       <div className="section-text">
-        <h2>{title}</h2>
+        <h3 className="fs-2">{title}</h3>
         <p dangerouslySetInnerHTML={{ __html: text }} />
       </div>
     </section>

@@ -1,5 +1,7 @@
 import companyData from "../../data/owner.json";
 import Image from "next/image";
+import Link from "next/link";
+
 export default function NoleggioBusTrapani() {
   return (
     <>
@@ -30,9 +32,9 @@ export default function NoleggioBusTrapani() {
           <p className="lead">
             Comfort, sicurezza e professionalità per i tuoi viaggi in Sicilia
           </p>
-          <a href="/contatti" className="btn btn-primary mt-3">
+          <Link href="/contatti" className="btn btn-primary mt-3">
             Richiedi un preventivo
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -84,9 +86,9 @@ export default function NoleggioBusTrapani() {
             Siamo a disposizione per gite, tour turistici, cerimonie o
             trasferimenti da e per gli aeroporti siciliani.
           </p>
-          <a href="/contatti" className="btn btn-light btn-lg">
+          <Link href="/contatti" className="btn btn-light btn-lg">
             Richiedi un preventivo gratuito
-          </a>
+          </Link>
         </div>
       </section>
     </>

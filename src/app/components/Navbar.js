@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className="navbar fade-bg fixed-top z-3">
       <div className="container d-flex justify-content-center align-items-center">
-        <a href="/">
+        <Link aria-label="Vai alla home" href="/">
           <Image
             src="/images/logo.png"
             alt="logo-zeus-viaggi"
@@ -30,7 +31,7 @@ export default function Navbar() {
             height={308}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-        </a>
+        </Link>
       </div>
     </nav>
   );

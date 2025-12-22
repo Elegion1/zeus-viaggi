@@ -23,9 +23,9 @@ export default function Hero() {
             <h1 className="responsive-text fw-bold mb-3">
               Noleggio autobus con conducente a Trapani e in tutta la Sicilia
             </h1>
-            <p className="lead responsive-text-p">
-              Professionalità, eleganza e affidabilità dal 2004
-            </p>
+            <h2 className="lead responsive-text-p fs-6">
+              Servizi puntuali e confortevoli per viaggi in totale tranquillità
+            </h2>
           </div>
         </div>
       </main>

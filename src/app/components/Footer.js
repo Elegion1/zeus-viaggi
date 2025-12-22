@@ -1,5 +1,6 @@
 import Image from "next/image";
 import companyData from "../../data/owner.json";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -28,24 +29,29 @@ export default function Footer() {
             <h4 className="fw-bold mb-3">Link utili</h4>
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="#chi-siamo" className="footer-link">
+                <Link href="#chi-siamo" className="footer-link">
                   Chi siamo
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#servizi" className="footer-link">
+                <Link href="#servizi" className="footer-link">
                   Servizi
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#flotta" className="footer-link">
+                <Link href="#flotta" className="footer-link">
                   Flotta
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contatti" className="footer-link">
+                <Link href="#contatti" className="footer-link">
                   Contatti
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/sitemap.xml" className="footer-link">
+                  Sitemap
+                </Link>
               </li>
             </ul>
           </div>
@@ -55,15 +61,18 @@ export default function Footer() {
             <h4 className="fw-bold mb-3">Contatti</h4>
             <p className="mb-1">
               📞{" "}
-              <a href={`tel:${companyData.phone}`} className="footer-link">
+              <Link href={`tel:${companyData.phone}`} className="footer-link">
                 {companyData.phone}
-              </a>
+              </Link>
             </p>
             <p className="mb-1">
               ✉️{" "}
-              <a href={`mailto:${companyData.email}`} className="footer-link">
+              <Link
+                href={`mailto:${companyData.email}`}
+                className="footer-link"
+              >
                 {companyData.email}
-              </a>
+              </Link>
             </p>
             <p className="mb-0">
               📍 {companyData.address.city} ({companyData.address.province}),{" "}
@@ -80,14 +89,14 @@ export default function Footer() {
           diritti riservati.
           <br />
           Sito web realizzato da{" "}
-          <a
-            href="https://www.linkedin.com/in/giovanni-sugamiele-webdev/"
+          <Link
+            href="https://elegion.it"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
           >
             Giovanni Sugamiele
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
