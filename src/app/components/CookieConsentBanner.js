@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const COOKIE_NAME = "cookie_consent_status"; // può essere cambiato
 const COOKIE_EXP_DAYS = 365;
